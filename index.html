@@ -3,9 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World</title>
+    <title>Yoni Smolyar | Home</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            color: #333;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        .emoji {
+            font-size: 1.5rem;
+            margin-right: 8px;
+        }
+        .container {
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .links {
+            margin-top: 2rem;
+        }
+        .links a {
+            margin-right: 1rem;
+            text-decoration: none;
+            color: #3498db;
+        }
+        .links a:hover {
+            text-decoration: underline;
+        }
+        .profile-section {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 2rem;
+            border: 4px solid #fff;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .profile-intro {
+            flex: 1;
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello, World!</h1>
+    <div class="container">
+        <div class="profile-section">
+            <img src="profpic.webp" alt="Yoni Smolyar" class="profile-pic">
+            <div class="profile-intro">
+                <h1><span class="emoji">👋</span> Hey, I'm Yoni</h1>
+                <p>Developer focused on AI and building products.</p>
+            </div>
+        </div>
+        
+        <p><span class="emoji">💻</span> Building with AI and finding product market fit.</p>
+        
+        <p><span class="emoji">🌱</span> When not online, I'm touching grass.</p>
+        
+        <p><span class="emoji">📱</span> Probably posting every day on social media.</p>
+        
+        <div class="links">
+            <a href="links.html">My Links</a>
+        </div>
+    </div>
 </body>
 </html> 
