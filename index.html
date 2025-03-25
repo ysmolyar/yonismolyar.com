@@ -4,31 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yoni Smolyar | Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'JetBrains Mono', 'Courier New', monospace;
             line-height: 1.6;
             max-width: 900px;
             margin: 0 auto;
             padding: 3rem 2rem;
-            color: #333;
-            background-color: #f5f7fa;
+            color: #2d3748;
+            background-color: #f7f9fc;
+            background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%239fa6b2' fill-opacity='0.5' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='1.5'/%3E%3Ccircle cx='13' cy='13' r='1.5'/%3E%3C/g%3E%3C/svg%3E");
         }
         h1 {
-            color: #2c3e50;
+            color: #2d3748;
             white-space: nowrap;
-            font-size: 2.2rem;
+            font-size: 2rem;
             margin-bottom: 8px;
+            font-weight: 700;
         }
         .emoji {
-            font-size: 1.8rem;
+            font-size: 1.7rem;
             margin-right: 10px;
         }
         .container {
             background-color: #ffffff;
             border-radius: 12px;
             padding: 3rem;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+            border: 1px solid #e2e8f0;
+            background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23cbd5e0' fill-opacity='0.5' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='1.5'/%3E%3Ccircle cx='13' cy='13' r='1.5'/%3E%3C/g%3E%3C/svg%3E");
         }
         .links {
             margin-top: 2.5rem;
@@ -36,16 +43,18 @@
         .links a {
             margin-right: 1rem;
             text-decoration: none;
-            color: #3498db;
-            font-size: 1.1rem;
+            color: #3182ce;
+            font-size: 1rem;
             padding: 8px 16px;
             border-radius: 6px;
-            background-color: #f0f8ff;
+            background-color: #ebf8ff;
             transition: all 0.2s ease;
+            border: 1px solid #bee3f8;
+            font-weight: 500;
         }
         .links a:hover {
-            background-color: #e1f0fe;
-            color: #1d6fa5;
+            background-color: #bee3f8;
+            color: #2c5282;
             text-decoration: none;
         }
         .profile-section {
@@ -54,27 +63,34 @@
             margin-bottom: 2.5rem;
         }
         .profile-pic {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            border-radius: 8px;
             object-fit: cover;
-            margin-right: 3rem;
-            border: 5px solid #fff;
-            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+            margin-right: 2.5rem;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
         }
         .profile-intro {
             flex: 1;
             min-width: 0;
         }
         .profile-intro p {
-            font-size: 1.15rem;
-            color: #555;
+            font-size: 1.1rem;
+            color: #4a5568;
             margin-top: 0;
         }
         .info-text {
-            font-size: 1.15rem;
+            font-size: 1.1rem;
             margin: 1.2rem 0;
-            color: #555;
+            color: #4a5568;
+            position: relative;
+            padding-left: 2.8rem;
+        }
+        .info-text .emoji {
+            position: absolute;
+            left: 0;
+            top: 0;
         }
         
         @media (max-width: 768px) {
@@ -85,15 +101,15 @@
                 padding: 2rem;
             }
             .profile-pic {
-                width: 160px;
-                height: 160px;
-                margin-right: 2.5rem;
+                width: 130px;
+                height: 130px;
+                margin-right: 2rem;
             }
             h1 {
-                font-size: 2rem;
+                font-size: 1.8rem;
             }
             .emoji {
-                font-size: 1.6rem;
+                font-size: 1.5rem;
             }
         }
         
@@ -117,17 +133,25 @@
                 height: 120px;
             }
             h1 {
-                font-size: 1.6rem;
+                font-size: 1.5rem;
             }
             .emoji {
-                font-size: 1.4rem;
+                font-size: 1.3rem;
             }
             .profile-intro p, .info-text {
                 font-size: 1rem;
             }
             .links a {
-                font-size: 1rem;
+                font-size: 0.9rem;
                 padding: 6px 12px;
+            }
+            .info-text {
+                padding-left: 0;
+                text-align: center;
+            }
+            .info-text .emoji {
+                position: static;
+                margin-right: 8px;
             }
         }
     </style>
@@ -138,19 +162,21 @@
             <img src="profpic.webp" alt="Yoni Smolyar" class="profile-pic">
             <div class="profile-intro">
                 <h1><span class="emoji">👋</span> Hey, I'm Yoni</h1>
-                <p>Developer focused on AI and building products.</p>
+                <p>Developer focused on AI and building internet companies.</p>
             </div>
         </div>
         
         <p class="info-text"><span class="emoji">💻</span> Building with AI and finding product market fit.</p>
+                
+        <p class="info-text"><span class="emoji">📱</span> 100k+ followers, content creator.</p>
         
         <p class="info-text"><span class="emoji">🌱</span> When not online, I'm touching grass.</p>
-        
-        <p class="info-text"><span class="emoji">📱</span> Probably posting every day on social media.</p>
-        
+
         <div class="links">
             <a href="links.html">My Links</a>
         </div>
     </div>
+    <!-- 100% privacy-first analytics -->
+    <script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
 </body>
 </html> 
