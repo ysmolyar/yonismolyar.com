@@ -8,51 +8,127 @@
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
-            padding: 2rem;
+            padding: 3rem 2rem;
             color: #333;
+            background-color: #f5f7fa;
         }
         h1 {
             color: #2c3e50;
+            white-space: nowrap;
+            font-size: 2.2rem;
+            margin-bottom: 8px;
         }
         .emoji {
-            font-size: 1.5rem;
-            margin-right: 8px;
+            font-size: 1.8rem;
+            margin-right: 10px;
         }
         .container {
-            background-color: #f9f9f9;
-            border-radius: 10px;
-            padding: 2rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 3rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
         }
         .links {
-            margin-top: 2rem;
+            margin-top: 2.5rem;
         }
         .links a {
             margin-right: 1rem;
             text-decoration: none;
             color: #3498db;
+            font-size: 1.1rem;
+            padding: 8px 16px;
+            border-radius: 6px;
+            background-color: #f0f8ff;
+            transition: all 0.2s ease;
         }
         .links a:hover {
-            text-decoration: underline;
+            background-color: #e1f0fe;
+            color: #1d6fa5;
+            text-decoration: none;
         }
         .profile-section {
             display: flex;
             align-items: center;
-            margin-bottom: 2rem;
+            margin-bottom: 2.5rem;
         }
         .profile-pic {
-            width: 150px;
-            height: 150px;
+            width: 180px;
+            height: 180px;
             border-radius: 50%;
             object-fit: cover;
-            margin-right: 2rem;
-            border: 4px solid #fff;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-right: 3rem;
+            border: 5px solid #fff;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
         }
         .profile-intro {
             flex: 1;
+            min-width: 0;
+        }
+        .profile-intro p {
+            font-size: 1.15rem;
+            color: #555;
+            margin-top: 0;
+        }
+        .info-text {
+            font-size: 1.15rem;
+            margin: 1.2rem 0;
+            color: #555;
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 1.5rem;
+            }
+            .container {
+                padding: 2rem;
+            }
+            .profile-pic {
+                width: 160px;
+                height: 160px;
+                margin-right: 2.5rem;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            .emoji {
+                font-size: 1.6rem;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            body {
+                padding: 1rem;
+            }
+            .container {
+                padding: 1.5rem;
+                border-radius: 10px;
+            }
+            .profile-section {
+                flex-direction: column;
+                text-align: center;
+                margin-bottom: 2rem;
+            }
+            .profile-pic {
+                margin-right: 0;
+                margin-bottom: 1.5rem;
+                width: 120px;
+                height: 120px;
+            }
+            h1 {
+                font-size: 1.6rem;
+            }
+            .emoji {
+                font-size: 1.4rem;
+            }
+            .profile-intro p, .info-text {
+                font-size: 1rem;
+            }
+            .links a {
+                font-size: 1rem;
+                padding: 6px 12px;
+            }
         }
     </style>
 </head>
@@ -66,11 +142,11 @@
             </div>
         </div>
         
-        <p><span class="emoji">💻</span> Building with AI and finding product market fit.</p>
+        <p class="info-text"><span class="emoji">💻</span> Building with AI and finding product market fit.</p>
         
-        <p><span class="emoji">🌱</span> When not online, I'm touching grass.</p>
+        <p class="info-text"><span class="emoji">🌱</span> When not online, I'm touching grass.</p>
         
-        <p><span class="emoji">📱</span> Probably posting every day on social media.</p>
+        <p class="info-text"><span class="emoji">📱</span> Probably posting every day on social media.</p>
         
         <div class="links">
             <a href="links.html">My Links</a>
